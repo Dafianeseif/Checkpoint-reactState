@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, #1e1e2f, #15151e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #00ffe0;
+  text-transform: uppercase;
+  animation: glow 1.5s infinite alternate;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 1.5rem 0;
+  border: 4px solid #1f4037;
+  transition: all 0.3s ease;
+}
+
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.profile-card p {
+  font-size: 0.9rem;
+  color: #c5c5c5;
+  margin-bottom: 1rem;
+}
+
+.profile-card strong {
+  font-size: 1.1rem;
+  color: #00ffe0;
+  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+}
+
+button {
+  background: linear-gradient(135deg, #ff0075, #00d9ff);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(255, 0, 117, 0.6);
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #808080;
+  margin-top: 2rem;
+}
+
+footer span {
+  color: #00ffe0;
+  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  }
+  to {
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ffe0, 0 0 30px #00ffe0;
+  }
+}
